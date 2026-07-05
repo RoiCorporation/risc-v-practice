@@ -1,4 +1,4 @@
-name: RISC-V practice exercises CI/CD workflow
+name: RISC-V practice exercises tests
 
 on:
   push:
@@ -27,6 +27,8 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
+
+          cd practice_exercises
 
           for d in */; do
             folder_name=${d%/}
