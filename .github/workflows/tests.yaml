@@ -35,6 +35,8 @@ jobs:
 
             pushd "$d" >/dev/null
 
+            echo "🧪 Testing $folder_name exercise"
+
             riscv64-linux-gnu-gcc -march=rv64gc -mabi=lp64d test.c \
               "${folder_name}.s" \
               -o "${folder_name}"
