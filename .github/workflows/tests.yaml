@@ -27,19 +27,20 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
+
           for d in */; do
-          folder_name=${d%/}
+            folder_name=${d%/}
 
-          pushd "$d" >/dev/null
+            pushd "$d" >/dev/null
 
-          riscv64-linux-gnu-gcc-march=rv64gc -mabi=lp64d test.c \
-            "${folder_name}.s" \
-            -o "${folder_name}"
+            riscv64-linux-gnu-gcc-march=rv64gc -mabi=lp64d test.c \
+              "${folder_name}.s" \
+              -o "${folder_name}"
 
-          qemu-riscv64 -L /usr/riscv64-linux-gnu "./${folder_name}"
+            qemu-riscv64 -L /usr/riscv64-linux-gnu "./${folder_name}"
 
-          popd >/dev/null
-              echo "✅ $folder_name test passed"
-            fi
+            popd >/dev/null
+                echo "✅ $folder_name test passed"
+
           done
           echo "✅ All tests passed!"
