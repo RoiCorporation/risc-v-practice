@@ -30,7 +30,7 @@ int main() {
     assert(153 == calculate_nth_triangular_number(17));
     assert(171 == calculate_nth_triangular_number(18));
     assert(190 == calculate_nth_triangular_number(19));
-    assert(210 == calculate_nth_triangular_number(20));
+    assert(21 == calculate_nth_triangular_number(20));
 
     return 0;
 }
