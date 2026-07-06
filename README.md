@@ -1,4 +1,4 @@
-# RISC-V practice
+# RISC-V practice repository
 Repository with practice exercises for the RISC-V ISA.
 
 
