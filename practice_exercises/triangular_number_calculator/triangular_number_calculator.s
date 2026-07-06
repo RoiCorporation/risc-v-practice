@@ -95,18 +95,17 @@ calculate_nth_triangular_number:
     # Return
     jalr zero, 0(ra)
 
+    # Return 0 if the argument is 0 (first base case).
+    treat_base_case_0:
+        addi a0, zero, 0
+        jalr zero, 0(ra)
 
-# Return 0 if the argument is 0 (first base case).
-treat_base_case_0:
-    addi a0, zero, 0
-    jalr zero, 0(ra)
+    # Return 1 if the argument is 1 (second base case).
+    treat_base_case_1:
+        addi a0, zero, 1
+        jalr zero, 0(ra)
 
-# Return 1 if the argument is 1 (second base case).
-treat_base_case_1:
-    addi a0, zero, 1
-    jalr zero, 0(ra)
-
-# Return 3 if the argument is 2 (third base case).
-treat_base_case_2:
-    addi a0, zero, 3
-    jalr zero, 0(ra)
+    # Return 3 if the argument is 2 (third base case).
+    treat_base_case_2:
+        addi a0, zero, 3
+        jalr zero, 0(ra)
