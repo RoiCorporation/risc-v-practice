@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu:latest
 
-# install app dependencies
+# Install all necessary dependencies
 RUN apt-get update
 RUN apt-get install -y autoconf automake autotools-dev curl python3 python3-pip \
     python3-tomli libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex \
@@ -9,5 +9,5 @@ RUN apt-get install -y autoconf automake autotools-dev curl python3 python3-pip 
     cmake libglib2.0-dev libslirp-dev libncurses-dev gcc-riscv64-linux-gnu \
     qemu-system qemu-user-binfmt
 
-# move to the corresponding folder
+# Move to the appropriate working directory
 WORKDIR /practice_exercises
