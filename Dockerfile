@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 # Install all necessary dependencies
 RUN apt-get update
