@@ -1,3 +1,8 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)&emsp;[![RISC-V practice exercises tests](https://github.com/RoiCorporation/risc-v-practice/actions/workflows/tests.yaml/badge.svg)](https://github.com/RoiCorporation/risc-v-practice/actions/workflows/tests.yaml)
+
+
+
+
 # RISC-V practice repository
 Repository with practice exercises for the RISC-V ISA.
 
